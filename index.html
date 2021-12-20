@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker App</title>
+  <link rel="stylesheet" href="assets/styles/style.css" />
+  <script src="assets/scripts/script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="modal-container close">
+    <div class="modal">
+      <div class="modal-title">Add The Amount</div>
+      <div class="form-control">
+        <div class="title">Title</div>
+        <input type="text" id="expense-name-input" class="input">
+      </div>
+      <div class="form-control">
+        <div class="title">amount</div>
+        <input type="number" id="expense-amount-input" class="input">
+      </div>
+
+      <div class="radio-control">
+
+        <div class="radio">
+          <input checked id="income" value="income" type="radio" name="type">
+          <label for="income">income</label>
+        </div>
+
+        <div class="radio">
+          <input id="expense" value="expense" type="radio" name="type">
+          <label for="expense">expence</label>
+        </div>
+
+      </div>
+
+      <button class="btn add">Add</button>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <h1 class="title">Expense Tracker</h1>
+
+    <div class="row">
+      <div class="balance">Balance: $<span id="balance">0</span></div>
+      <button class="btn" id="show-btn">Add</button>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="title">Expense</div>
+        <div class="total-amount expense-amount">$<span id="total-expense">0</span></div>
+      </div>
+      <div class="col">
+        <div class="title">Income</div>
+        <div class="total-amount income-amount">$<span id="total-income">0</span></div>
+      </div>
+    </div>
+
+    <h2>transactions</h2>
+
+    <div class="transactions">
+  
+
+    </div>
+
+  </div>
+</body>
+
+</html>

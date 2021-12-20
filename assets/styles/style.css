@@ -1,0 +1,221 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 30rem;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1rem 1rem 2rem 0.1rem rgba(0, 0, 0, 0.3);
+  padding-bottom: 2.5rem;
+}
+
+.container .title {
+  font-size: 2.4rem;
+  margin-top: 2rem;
+}
+
+.row {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.balance {
+  font-size: 2rem;
+  justify-self: flex-start;
+  font-weight: 600;
+}
+
+.btn {
+  border: 0;
+  background-color: #2a2c41;
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  justify-self: flex-end;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn:active {
+  transform: scale(0.99);
+}
+
+.col {
+  border-left: 1px solid #787878;
+  border-right: 1px solid #787878;
+  height: 10rem;
+  padding: 0 2rem;
+}
+
+.col .title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #616161;
+}
+
+.total-amount {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.income-amount {
+  color: #2cc32c;
+}
+
+.expense-amount {
+  color: #ce2727;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  align-self: flex-start;
+  margin: 3rem 0 1rem 2.7rem;
+  text-transform: capitalize;
+}
+
+.transactions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.transactions::-webkit-scrollbar {
+  display: none;
+}
+
+.transaction {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.transaction span {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.transaction .amount {
+  margin-right: 1rem;
+}
+
+[data-type="income"] {
+  border-right: 0.5rem solid #2cc32c;
+}
+
+[data-type="expense"] {
+  border-right: 0.5rem solid #ce2727;
+}
+
+.modal-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #b0b0b085;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -100%;
+  transition: top 0.5s ease-in-out;
+}
+
+.modal-container.show {
+  top: 0;
+}
+
+.modal {
+  width: 40rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 1rem 1rem 2rem 0.1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+.modal .modal-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  padding: 0 2rem;
+  margin: 1rem 0;
+}
+
+.form-control .title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.input {
+  padding: 1rem 2rem;
+  border: 0;
+  background-color: #333;
+  color: #fff;
+  outline: 0;
+  font-size: 1.6rem;
+}
+
+.radio-control {
+  margin-top: 2rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.radio-control .radio {
+  margin-right: 5rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal .btn {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
